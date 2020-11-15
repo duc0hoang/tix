@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: all 0.2s;
+}
+
+header a {
+  text-decoration: none !important;
+}
+
+header .webLogo {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 50px;
+}
+
+header .mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .mid a {
+  color: #000;
+  margin-right: 20px;
+  transition: all 0.2s;
+}
+
+header .mid a:nth-of-type(4) {
+  margin-right: 0;
+}
+
+header .mid a:hover {
+  color: #fb4226;
+}
+
+header .mid a:focus, header .mid a:active {
+  outline: none;
+}
+
+header .right {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+header .right .loginRight {
+  padding-right: 15px;
+}
+
+header .right .loginRight .login {
+  height: auto;
+  width: 30px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+header .right .loginRight span {
+  color: #9b9b9b;
+  font-size: 13px;
+}
+
+header .right #dropdownMenuButton {
+  background-color: #fff;
+  border-color: transparent;
+  color: #9b9b9b;
+  font-size: 13px;
+}
+
+header .right #dropdownMenuButton span {
+  padding-right: 10px;
+}
+
+header .right button:focus {
+  outline: none;
+}
+
+footer {
+  background-color: #222;
+}
+
+footer .footer__top p {
+  color: #fff;
+  font-size: 12px;
+}
+
+footer .footer__top a {
+  text-decoration: none;
+  transition: all .2s;
+}
+
+footer .footer__top a p {
+  font-weight: 700;
+  font-size: 13px;
+  color: #949494;
+}
+
+footer .footer__top a:hover p {
+  color: #fff;
+}
+
+footer .footer__top .row {
+  margin: 0;
+}
+
+footer .footer__top .line {
+  margin-bottom: 15px;
+}
+
+footer .footer__top .icon img {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+footer .footer__top .logo img {
+  height: 30px;
+  width: auto;
+  margin: 5px;
+}
+/*# sourceMappingURL=main.css.map */
