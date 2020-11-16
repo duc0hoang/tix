@@ -42,5 +42,30 @@ footer{
                 margin: 5px;
             }
         }
+        padding-bottom: 10px;
+    }
+
+    .footer__bot{
+        border-top: 1px solid #4a4a4a;
+        padding-top: 20px;
+        .zion_logo{
+            width: 80px;
+        }
+
+        p{
+            color: #949494;
+            &:nth-of-type(1){
+                color: #fff;
+            }
+        }
+        .support{
+            color: #FB4226;
+            text-decoration: none;
+        }
+        .logo_bct{
+            img{
+                width: 130px;
+            }
+        }
     }
 }

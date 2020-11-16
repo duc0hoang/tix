@@ -8,6 +8,11 @@
   outline: none;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 html,
 body {
   font-family: "Roboto Condensed", sans-serif;
@@ -19,17 +24,26 @@ header {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   z-index: 999;
   transition: all 0.2s;
+}
+
+header:hover {
+  background-color: #fff;
 }
 
 header a {
   text-decoration: none !important;
 }
 
-header .webLogo {
+header .navbar {
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+header .navbar-brand .webLogo {
   position: absolute;
   top: 50%;
   left: 20px;
@@ -37,28 +51,28 @@ header .webLogo {
   width: 50px;
 }
 
-header .mid {
+header #navbarSupportedContent {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-header .mid a {
+header #navbarSupportedContent a {
   color: #000;
   margin-right: 20px;
   transition: all 0.2s;
 }
 
-header .mid a:nth-of-type(4) {
+header #navbarSupportedContent a:nth-of-type(4) {
   margin-right: 0;
 }
 
-header .mid a:hover {
+header #navbarSupportedContent a:hover {
   color: #fb4226;
 }
 
-header .mid a:focus, header .mid a:active {
+header #navbarSupportedContent a:focus, header #navbarSupportedContent a:active {
   outline: none;
 }
 
@@ -100,8 +114,142 @@ header .right button:focus {
   outline: none;
 }
 
+@media screen and (max-width: 768px) {
+  #navbarSupportedContent {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.news {
+  background-image: url(../../img/back-news.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+}
+
+.news .news__content .nav .nav-item .nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.news .news__content .nav .nav-item .nav-link:hover {
+  font-size: 24px;
+}
+
+.news .news__content .nav .nav-item .nav-link.active {
+  font-size: 24px;
+  color: #fa5238;
+}
+
+.news .news__content .news__item {
+  padding: 0 5px;
+  margin-bottom: 25px;
+}
+
+.news .news__content .news__item img {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.news .news__content .news__title {
+  text-decoration: none !important;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.news .news__content .news__title p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 42px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 5px !important;
+}
+
+.news .news__content .news__title:hover {
+  color: #fb4226;
+}
+
+.news .news__content .news__description {
+  text-align: justify;
+  font-size: 13px;
+  color: #4a4a4a;
+  padding: 0 5px 0 0;
+  line-height: 19px;
+  text-overflow: ellipsis;
+  height: 55px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.news .news__content .hiding {
+  opacity: 0.7;
+}
+
+.news .news__content .news__icon {
+  color: #bbb;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.news .news__content .news__icon i {
+  color: #bbb;
+  margin-right: 5px;
+}
+
+.news .news__content .btnXemThem .btn-xemThem {
+  font-size: 14px;
+  color: #949494;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all 0.2s;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.news .news__content .btnXemThem .btn-xemThem:hover {
+  background-color: #fb4226;
+  border-color: #fb4226;
+  color: #fff !important;
+}
+
+.news .news__content .btnXemThem .btn-xemThem:focus {
+  box-shadow: none;
+}
+
+.news .news__content .news__last {
+  padding: 0;
+}
+
+.news .news__content .news__last .news__small {
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .news__content.container {
+    max-width: 100%;
+  }
+}
+
 footer {
   background-color: #222;
+}
+
+footer .footer__top {
+  padding-bottom: 10px;
 }
 
 footer .footer__top p {
@@ -144,5 +292,31 @@ footer .footer__top .logo img {
   height: 30px;
   width: auto;
   margin: 5px;
+}
+
+footer .footer__bot {
+  border-top: 1px solid #4a4a4a;
+  padding-top: 20px;
+}
+
+footer .footer__bot .zion_logo {
+  width: 80px;
+}
+
+footer .footer__bot p {
+  color: #949494;
+}
+
+footer .footer__bot p:nth-of-type(1) {
+  color: #fff;
+}
+
+footer .footer__bot .support {
+  color: #FB4226;
+  text-decoration: none;
+}
+
+footer .footer__bot .logo_bct img {
+  width: 130px;
 }
 /*# sourceMappingURL=main.css.map */
