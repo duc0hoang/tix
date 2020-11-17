@@ -123,6 +123,31 @@ header .right button:focus {
   }
 }
 
+.showing {
+  background-image: url(../../img/back-news.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+}
+
+.showing .logo {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.showing .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.showing .logo.active {
+  background-color: transparent;
+}
+
 .news {
   background-image: url(../../img/back-news.png);
   background-size: contain;
