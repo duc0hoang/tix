@@ -1,6 +1,9 @@
 @import './Helper/variables';
 @import './Helper/mixin';
 
+@import './Vendor/slickCarousel/slick';
+@import './Vendor/slickCarousel/slick-theme'
+
 @import './Base/reset';
 // @import './Base/customize';
 
@@ -17,7 +20,7 @@
 // @import './Layouts/start';
 // @import './Layouts/categories';
 // @import './Layouts/review';
-// @import './Layouts/company';
+@import './Layouts/banner';
 @import './Layouts/showing';
 @import './Layouts/news';
 @import './Layouts/footer';
