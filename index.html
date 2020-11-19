@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
-    <header class="container-fluid">
+<body>    <header class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img class="webLogo" src="./img/web-logo.png" alt="">
@@ -68,7 +67,9 @@
             </div>
         </nav>
     </header>
-    <section class="tixCarousel"></section>
+    <section class="tixCarousel">
+
+    </section>
     <section class="movie" id="movie"></section>
     <section class="showing" id="showing">
         <div class="showing__content container">
@@ -847,7 +848,7 @@
                         </div>
                     </div>
                     <div class="btnXemThem d-flex justify-content-center">
-                        <button class="btn btn-xemThem my-5" id="btnXemThemDienAnh" >XEM THÊM</button>
+                        <button class="btn btn-xemThem my-5" id="btnXemThemDienAnh">XEM THÊM</button>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -1132,19 +1133,19 @@
                 <div class="col-6 right">
                     <img class="img-responsive img-phone" src="./img/mobile.png" alt="">
                     <div class="mobileCarousel">
-                        <div class="mobile__item">
+                        <div class="item">
                             <img class="img-fluid img-item" src="./img/slide1.jpg" alt="">
                         </div>
-                        <div class="mobile__item">
+                        <div class="item">
                             <img class="img-fluid img-item" src="./img/slide2.jpg" alt="">
                         </div>
-                        <div class="mobile__item">
+                        <div class="item">
                             <img class="img-fluid img-item" src="./img/slide3.jpg" alt="">
                         </div>
-                        <div class="mobile__item">
+                        <div class="item">
                             <img class="img-fluid img-item" src="./img/slide4.jpg" alt="">
                         </div>
-                        <div class="mobile__item">
+                        <div class="item">
                             <img class="img-fluid img-item" src="./img/slide5.jpg" alt="">
                         </div>
                     </div>
@@ -1312,18 +1313,9 @@
 
     <script src="./js/vendor/slickCarousel/slick.min.js"></script>
 
-    <!-- <script type="text/javascript">
-        $(document).ready(function () {
-            $('.mobileCarousel').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                infinite: true,
-                arrows: false,
-            });
-        });
-    </script> -->
+    <script src="./js/vendor/owlCarousel/owl.carousel.min.js"></script>
+
+    
 
     <script src="./js/controllers/index.js"></script>
 </body>
