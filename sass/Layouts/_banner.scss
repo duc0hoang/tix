@@ -33,10 +33,26 @@
             }
         }
         .right {
+            position: relative;
+            // overflow: hidden;
             .img-phone {
                 padding: 0 28%;
             }
-            
+            .mobileCarousel {
+                position: absolute;
+                top: 11px;
+                left: 169px;
+                overflow: hidden;
+                // padding: 0 28%;
+                white-space: nowrap;
+                .mobile__item {
+                    display: inline;
+                    .img-item {
+                        height: 470px !important;
+                        border-radius: 25px;
+                    }
+                }
+            }
         }
     }
 }
