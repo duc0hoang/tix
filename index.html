@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tix</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -45,7 +47,7 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="header__item right d-none d-md-flex">
                 <a class="loginRight" href="#">
                     <img class="login" src="./img/avatar.png" alt="">
@@ -70,62 +72,45 @@
     </header>
     <nav id="sidebar">
         <div id="dismiss">
-            <i class="fas fa-arrow-right"></i>
+            <img class="img-fluid" src="./img/next-session.png" alt="">
         </div>
-
-        <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
+        <a class="loginRight" href="#">
+            <img class="login" src="./img/avatar.png" alt="">
+            <span>Đăng Nhập</span>
+        </a>
+        <ul>
+            <li class="nav-item active">
+                <a class="" href="#movie">Lịch Chiếu <span class="sr-only">(current)</span></a>
             </li>
-            <li>
-                <a href="#">About</a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
+            <li class="nav-item active">
+                <a class="" href="#showing">Cụm rạp <span class="sr-only">(current)</span></a>
             </li>
-            <li>
-                <a href="#">Portfolio</a>
+            <li class="nav-item active">
+                <a class="" href="#news">Tin Tức <span class="sr-only">(current)</span></a>
             </li>
-            <li>
-                <a href="#">Contact</a>
+            <li class="nav-item active">
+                <a class="" href="#banner">Ứng dụng <span class="sr-only">(current)</span></a>
             </li>
-        </ul>
-
-        <ul class="list-unstyled CTAs">
-            <li>
-                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download
-                    source</a>
-            </li>
-            <li>
-                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            <li class="nav-item active">
+                <button type="button" data-toggle="modal" data-target="#myLocaltion">Hồ Chí Minh</button>
             </li>
         </ul>
     </nav>
+    <div class="modal fade" id="myLocaltion" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <ul>
+                    <li>Hồ Chí Minh</li>
+                    <li>Hà Nội</li>
+                    <li>Huế</li>
+                    <li>Đà Lạt</li>
+                    <li>Vũng Tàu</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <div class="overlay"></div>
     <section class="tixCarousel">
 
