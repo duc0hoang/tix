@@ -28,3 +28,16 @@ html{
     max-width: 100%;
     height: auto;
 }
+
+
+
+.container{
+    max-width: 970px !important;
+}
+
+@media screen and (max-width:992px){
+    .container{
+        max-width: 100% !important;
+        padding: 0;
+    }
+}

@@ -1,4 +1,5 @@
 footer{
+    padding-top: 20px;
     background-color: #222;
     .footer__top{
         p{
@@ -67,5 +68,40 @@ footer{
                 width: 130px;
             }
         }
+    }
+}
+
+@media screen and (max-width:992px){
+    .footer__top{
+        .dieuChinh{
+            display: inline;
+        }
+    }
+    .footer__bot{
+        .mid{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:892px){
+    .footer__top{
+        .dieuChinh{
+            display: block;
+            padding-left: 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .footer__bot{
+        text-align: center !important;
+        .bot__bot{
+            text-align: center !important;
+            .logo_bct{
+                text-align: center !important;
+            }
+        }
+        
     }
 }
