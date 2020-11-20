@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>    <header class="container-fluid">
+<body>
+    <header class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img class="webLogo" src="./img/web-logo.png" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" id="sidebarCollapse">
+                <i class="fas fa-align-right"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,6 +45,7 @@
                     </li>
                 </ul>
             </div>
+            
             <div class="header__item right d-none d-md-flex">
                 <a class="loginRight" href="#">
                     <img class="login" src="./img/avatar.png" alt="">
@@ -67,6 +68,65 @@
             </div>
         </nav>
     </header>
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download
+                    source</a>
+            </li>
+            <li>
+                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="overlay"></div>
     <section class="tixCarousel">
 
     </section>
@@ -1303,6 +1363,10 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
@@ -1311,11 +1375,33 @@
         integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
         crossorigin="anonymous"></script>
 
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
     <script src="./js/vendor/slickCarousel/slick.min.js"></script>
 
     <script src="./js/vendor/owlCarousel/owl.carousel.min.js"></script>
 
-    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
 
     <script src="./js/controllers/index.js"></script>
 </body>
