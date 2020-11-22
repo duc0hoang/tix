@@ -44,13 +44,14 @@
         opacity: 1;
     }
     .nav-link {
+        max-width: 100%;
         opacity: 0.5;
         transition: all 0.2;
         &:hover {
             opacity: 1;
         }
     }
-    .bhd {
+    .cinema {
         .col-9 {
             p {
                 margin: 0;

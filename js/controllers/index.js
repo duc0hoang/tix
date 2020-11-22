@@ -293,7 +293,7 @@ document.querySelector('#btnXemThemDienAnh').onclick = function () {
 
     document.getElementById('dienAnhNews' + soLanThemNoiDung).scrollIntoView();
 
-    keoLenThem(0,-1000);
+    // keoLenThem(0,-10);
     
 
     soLanThemNoiDung += 1;
