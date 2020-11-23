@@ -1,9 +1,7 @@
 var soLanThemNoiDung = 0;
 var y = 0;
 var z = 0;
-var keoLenThem = function scrollWin(x, y) {
-    window.scrollBy(x, y);
-  }
+
 
 var noiDungKhuyenMaiThemVao = `
 <div class="col-12 col-sm-6 news__item">
@@ -291,11 +289,10 @@ document.querySelector('#btnXemThemDienAnh').onclick = function () {
 
     document.querySelector('#dienAnhContent').innerHTML = dienAnhContent + noiDungDienAnhThemVao;
 
-    document.getElementById('dienAnhNews' + soLanThemNoiDung).scrollIntoView();
+    var viTriKeo = document.getElementById('dienAnhNews' + soLanThemNoiDung).offsetTop;
 
-    // keoLenThem(0,-10);
+    window.scrollTo(0, viTriKeo - 70);
     
-
     soLanThemNoiDung += 1;
 }
 
