@@ -1,0 +1,111 @@
+.tixCarousel {
+    .tixCarousel__content {
+        .slick-dots {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            li {
+                margin: 0;
+                button {
+                    background-color: #d8d8d8;
+                    width: 12px;
+                    height: 12px;
+                    padding: 0;
+                    border-radius: 50%;
+                    border: none;
+                    color: transparent;
+                    &::before {
+                        display: none !important;
+                    }
+                }
+            }
+            .slick-active {
+                button {
+                    background-color: #fb4226;
+                }
+            }
+        }
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            width: 50px;
+            height: 100px;
+            z-index: 2;
+            opacity: 0.5;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            &::before {
+                display: none;
+            }
+        }
+        .slick-prev {
+            background-image: url(../../img/back-session.png);
+            left: 15px;
+        }
+        .slick-next {
+            background-image: url(../../img/next-session.png);
+            right: 12px;
+        }
+        .tixCarousel__item {
+            position: relative;
+            .img-carousel {
+                width: 100%;
+                height: 793px;
+            }
+            .popup-trailer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: transparent;
+                border: none;
+                width: 100px;
+                height: 100px;
+                z-index: 2;
+                opacity: 0;
+                transition: all .2s;
+                button {
+                    margin: 0 auto;
+                    color: white;
+                    text-align: center;
+                    display: block;
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    transition: all 0.5s;
+                    background-color: transparent;
+                    &:focus{
+                        outline: none;
+                    }
+                    z-index: 4;
+                    opacity: 1;
+                    transition: all .2s;
+                }
+                &:hover{
+                    button{
+                        opacity: .7;
+                    }
+                }
+            }
+            &:hover{
+                .popup-trailer{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

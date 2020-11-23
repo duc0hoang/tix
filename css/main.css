@@ -566,9 +566,6 @@ html {
 }
 
 header {
-  position: fixed;
-  top: -1px;
-  left: 0;
   width: 100%;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -808,6 +805,124 @@ header .right button:focus {
   #navbarSupportedContent1.navbar-collapse {
     display: none !important;
   }
+}
+
+.tixCarousel .tixCarousel__content .slick-dots {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.tixCarousel .tixCarousel__content .slick-dots li {
+  margin: 0;
+}
+
+.tixCarousel .tixCarousel__content .slick-dots li button {
+  background-color: #d8d8d8;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+}
+
+.tixCarousel .tixCarousel__content .slick-dots li button::before {
+  display: none !important;
+}
+
+.tixCarousel .tixCarousel__content .slick-dots .slick-active button {
+  background-color: #fb4226;
+}
+
+.tixCarousel .tixCarousel__content .slick-prev,
+.tixCarousel .tixCarousel__content .slick-next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 100px;
+  z-index: 2;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.tixCarousel .tixCarousel__content .slick-prev::before,
+.tixCarousel .tixCarousel__content .slick-next::before {
+  display: none;
+}
+
+.tixCarousel .tixCarousel__content .slick-prev {
+  background-image: url(../../img/back-session.png);
+  left: 15px;
+}
+
+.tixCarousel .tixCarousel__content .slick-next {
+  background-image: url(../../img/next-session.png);
+  right: 12px;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item {
+  position: relative;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item .img-carousel {
+  width: 100%;
+  height: 793px;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer button {
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  display: block;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.5s;
+  background-color: transparent;
+  z-index: 4;
+  opacity: 1;
+  transition: all .2s;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer button:focus {
+  outline: none;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer:hover button {
+  opacity: .7;
+}
+
+.tixCarousel .tixCarousel__content .tixCarousel__item:hover .popup-trailer {
+  opacity: 1;
 }
 
 .banner {
