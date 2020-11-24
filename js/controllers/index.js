@@ -431,3 +431,4 @@ document.querySelector('#btnXemThemKhuyenMai').onclick = function () {
     document.querySelector('#khuyenMaiContent').innerHTML = khuyenMaiContent + noiDungKhuyenMaiThemVao;
 }
 
+document.querySelector('#commingSoon').classList.remove("show", "active");
