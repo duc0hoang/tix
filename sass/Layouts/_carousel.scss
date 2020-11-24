@@ -1,4 +1,5 @@
 .tixCarousel {
+    position: relative;
     .tixCarousel__content {
         .slick-dots {
             position: absolute;
@@ -68,14 +69,14 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 background-color: transparent;
                 border: none;
                 width: 100px;
                 height: 100px;
                 z-index: 2;
                 opacity: 0;
-                transition: all .2s;
+                transition: all 0.2s;
                 button {
                     margin: 0 auto;
                     color: white;
@@ -88,24 +89,126 @@
                     border-radius: 50%;
                     transition: all 0.5s;
                     background-color: transparent;
-                    &:focus{
+                    &:focus {
                         outline: none;
                     }
                     z-index: 4;
                     opacity: 1;
-                    transition: all .2s;
+                    transition: all 0.2s;
                 }
-                &:hover{
-                    button{
-                        opacity: .7;
+                &:hover {
+                    button {
+                        opacity: 0.7;
                     }
                 }
             }
-            &:hover{
-                .popup-trailer{
+            &:hover {
+                .popup-trailer {
                     opacity: 1;
                 }
             }
+        }
+    }
+    .tixCarousel__datVe {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 8;
+        width: 52%;
+        .navbar {
+            height: 80px;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 100%;
+        }
+        #suatChieu,
+        #phim,#rap,#ngayXem {
+            background-color: transparent;
+            border-color: transparent;
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+            span {
+                padding-right: 10px;
+            }
+        }
+        .dropdown {
+            margin: 0 5px;
+            width: calc(70% / 4);
+            &:nth-of-type(1) {
+                width: 30%;
+            }
+            .dropdown-toggle {
+                width: 100%;
+                span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:nth-of-type(3){
+                .dropdown-item{
+                    p{
+                        margin: 0;
+                        &:nth-of-type(2){
+                            font-size: 11px;
+                            color: #AAAAAA;
+                        }
+                    }
+                    &:hover{
+                        p{
+                            margin: 0;
+                            &:nth-of-type(2){
+                                font-size: 11px;
+                                color: #fff;
+                            }
+                        } 
+                    }
+                }
+            }
+            button {
+                color: #fff;
+                background-color: #4a4a4a;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 150%;
+            left: 0;
+            z-index: 99;
+            min-width: 160px;
+            max-height: 300px;
+            overflow-y: auto;
+            .dropdown-item {
+                color: #333333;
+                font-size: 14px;
+                &:hover {
+                    background-color: #60c5ef;
+                    color: #fff;
+                }
+            }
+            
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(136, 136, 136, 0.364);
         }
     }
 }

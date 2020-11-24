@@ -672,19 +672,50 @@ header .right .loginRight span {
   font-size: 13px;
 }
 
-header .right #dropdownMenuButton {
-  background-color: #fff;
+header .right #localtion {
+  background-color: transparent;
   border-color: transparent;
   color: #9b9b9b;
   font-size: 13px;
 }
 
-header .right #dropdownMenuButton span {
+header .right #localtion span {
   padding-right: 10px;
 }
 
 header .right button:focus {
   outline: none;
+}
+
+header .right .dropdown-menu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  z-index: 99;
+  min-width: 160px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+header .right .dropdown-menu .dropdown-item {
+  color: #333333;
+}
+
+header .right .dropdown-menu .dropdown-item:hover {
+  background-color: #60c5ef;
+  color: #fff;
+}
+
+header .right ::-webkit-scrollbar {
+  width: 5px;
+}
+
+header .right ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+header .right ::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.364);
 }
 
 #sidebar {
@@ -810,6 +841,10 @@ header .right button:focus {
   }
 }
 
+.tixCarousel {
+  position: relative;
+}
+
 .tixCarousel .tixCarousel__content .slick-dots {
   position: absolute;
   bottom: 12%;
@@ -896,7 +931,7 @@ header .right button:focus {
   height: 100px;
   z-index: 2;
   opacity: 0;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer button {
@@ -913,7 +948,7 @@ header .right button:focus {
   background-color: transparent;
   z-index: 4;
   opacity: 1;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer button:focus {
@@ -921,50 +956,182 @@ header .right button:focus {
 }
 
 .tixCarousel .tixCarousel__content .tixCarousel__item .popup-trailer:hover button {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .tixCarousel .tixCarousel__content .tixCarousel__item:hover .popup-trailer {
   opacity: 1;
 }
 
-.movie__content .slick-prev,
-.movie__content .slick-next {
+.tixCarousel .tixCarousel__datVe {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 8;
+  width: 52%;
+}
+
+.tixCarousel .tixCarousel__datVe .navbar {
+  height: 80px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.tixCarousel .tixCarousel__datVe #suatChieu,
+.tixCarousel .tixCarousel__datVe #phim, .tixCarousel .tixCarousel__datVe #rap, .tixCarousel .tixCarousel__datVe #ngayXem {
+  background-color: transparent;
+  border-color: transparent;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tixCarousel .tixCarousel__datVe #suatChieu span,
+.tixCarousel .tixCarousel__datVe #phim span, .tixCarousel .tixCarousel__datVe #rap span, .tixCarousel .tixCarousel__datVe #ngayXem span {
+  padding-right: 10px;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown {
+  margin: 0 5px;
+  width: calc(70% / 4);
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown:nth-of-type(1) {
+  width: 30%;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown .dropdown-toggle {
+  width: 100%;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown .dropdown-toggle span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown:nth-of-type(3) .dropdown-item p {
+  margin: 0;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown:nth-of-type(3) .dropdown-item p:nth-of-type(2) {
+  font-size: 11px;
+  color: #AAAAAA;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown:nth-of-type(3) .dropdown-item:hover p {
+  margin: 0;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown:nth-of-type(3) .dropdown-item:hover p:nth-of-type(2) {
+  font-size: 11px;
+  color: #fff;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown button {
+  color: #fff;
+  background-color: #4a4a4a;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.tixCarousel .tixCarousel__datVe button:focus {
+  outline: none;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown-menu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  z-index: 99;
+  min-width: 160px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown-menu .dropdown-item {
+  color: #333333;
+  font-size: 14px;
+}
+
+.tixCarousel .tixCarousel__datVe .dropdown-menu .dropdown-item:hover {
+  background-color: #60c5ef;
+  color: #fff;
+}
+
+.tixCarousel .tixCarousel__datVe ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.tixCarousel .tixCarousel__datVe ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.tixCarousel .tixCarousel__datVe ::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.364);
+}
+
+#movie .movie__content .nav .nav-item .nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  transition: all 0.2s;
+}
+
+#movie .movie__content .nav .nav-item .nav-link:hover {
+  font-size: 24px;
+}
+
+#movie .movie__content .nav .nav-item .nav-link.active {
+  font-size: 24px;
+  color: #fa5238;
+}
+
+#movie .movie__content .owl-prev,
+#movie .movie__content .owl-next {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   width: 50px;
   height: 100px;
-  z-index: 2;
-  opacity: 0.5;
+  z-index: 20;
+  opacity: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.movie__content .slick-prev::before,
-.movie__content .slick-next::before {
+#movie .movie__content .owl-prev span,
+#movie .movie__content .owl-next span {
   display: none;
 }
 
-.movie__content .slick-prev {
-  background-image: url(../../img/back-session.png);
+#movie .movie__content .owl-prev {
+  background-image: url(../../img/back-session.png) !important;
   left: -70px;
 }
 
-.movie__content .slick-next {
-  background-image: url(../../img/next-session.png);
+#movie .movie__content .owl-next {
+  background-image: url(../../img/next-session.png) !important;
   right: -70px;
 }
 
-.movie__content .movie__item .movie__poster {
+#movie .movie__content .movie__item .movie__poster {
   position: relative;
   margin-bottom: 10px;
 }
 
-.movie__content .movie__item .movie__poster .rating {
+#movie .movie__content .movie__item .movie__poster .rating {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -978,28 +1145,28 @@ header .right button:focus {
   z-index: 6;
 }
 
-.movie__content .movie__item .movie__poster .rating p {
+#movie .movie__content .movie__item .movie__poster .rating p {
   font-size: 20px;
   line-height: 18px;
   margin: 0;
   white-space: nowrap;
 }
 
-.movie__content .movie__item .movie__poster .rating p:nth-of-type(2) {
+#movie .movie__content .movie__item .movie__poster .rating p:nth-of-type(2) {
   letter-spacing: -5px;
 }
 
-.movie__content .movie__item .movie__poster .rating p img {
+#movie .movie__content .movie__item .movie__poster .rating p img {
   width: 8px;
   margin: 0;
   padding: 0;
 }
 
-.movie__content .movie__item .movie__poster .rating p .half {
+#movie .movie__content .movie__item .movie__poster .rating p .half {
   width: 10px;
 }
 
-.movie__content .movie__item .movie__poster .overplay__top {
+#movie .movie__content .movie__item .movie__poster .overplay__top {
   position: absolute;
   top: 0;
   left: 0;
@@ -1010,7 +1177,7 @@ header .right button:focus {
   transition: all 0.2s;
 }
 
-.movie__content .movie__item .movie__poster .overplay__top button {
+#movie .movie__content .movie__item .movie__poster .overplay__top button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1032,19 +1199,19 @@ header .right button:focus {
   transition: all 0.2s;
 }
 
-.movie__content .movie__item .movie__poster .overplay__top button:focus {
+#movie .movie__content .movie__item .movie__poster .overplay__top button:focus {
   outline: none;
 }
 
-.movie__content .movie__item .movie__poster .overplay__top button:hover {
+#movie .movie__content .movie__item .movie__poster .overplay__top button:hover {
   opacity: 0.7;
 }
 
-.movie__content .movie__item .movie__intro {
+#movie .movie__content .movie__item .movie__intro {
   position: relative;
 }
 
-.movie__content .movie__item .movie__intro p:nth-of-type(1) {
+#movie .movie__content .movie__item .movie__intro p:nth-of-type(1) {
   height: 42px;
   max-height: 42px;
   font-size: 16px;
@@ -1055,7 +1222,7 @@ header .right button:focus {
   font-weight: 500;
 }
 
-.movie__content .movie__item .movie__intro p:nth-of-type(2) {
+#movie .movie__content .movie__item .movie__intro p:nth-of-type(2) {
   font-size: 13px;
   color: #4a4a4a;
   margin-bottom: 15px;
@@ -1064,7 +1231,7 @@ header .right button:focus {
   transition: all 0.2s;
 }
 
-.movie__content .movie__item .movie__intro span {
+#movie .movie__content .movie__item .movie__intro span {
   background-color: #fb4226;
   color: #fff;
   border-radius: 4px;
@@ -1076,11 +1243,11 @@ header .right button:focus {
   display: inline-block;
 }
 
-.movie__content .movie__item .movie__intro .age {
+#movie .movie__content .movie__item .movie__intro .age {
   background-color: #00ac4d;
 }
 
-.movie__content .movie__item .movie__intro .overplay__bot {
+#movie .movie__content .movie__item .movie__intro .overplay__bot {
   position: absolute;
   top: 0;
   left: 0;
@@ -1097,16 +1264,16 @@ header .right button:focus {
   text-decoration: none;
 }
 
-.movie__content .movie__item:hover .overplay__top,
-.movie__content .movie__item:hover .overplay__bot {
+#movie .movie__content .movie__item:hover .overplay__top,
+#movie .movie__content .movie__item:hover .overplay__bot {
   opacity: 1;
 }
 
-.movie__content .movie__item:hover .movie__intro p:nth-of-type(2) {
+#movie .movie__content .movie__item:hover .movie__intro p:nth-of-type(2) {
   display: none;
 }
 
-.movie__content .movie__commingSoon .movie__item .movie__poster .releasedDate {
+#movie .movie__content .movie__commingSoon .movie__item .movie__poster .releasedDate {
   position: absolute;
   bottom: 12px;
   right: 12px;
@@ -1119,11 +1286,11 @@ header .right button:focus {
   z-index: 6;
 }
 
-.movie__content .movie__commingSoon .movie__item .movie__poster .releasedDate p {
+#movie .movie__content .movie__commingSoon .movie__item .movie__poster .releasedDate p {
   margin: 0;
 }
 
-.movie__content .movie__commingSoon .movie__item .movie__intro p:nth-of-type(2) {
+#movie .movie__content .movie__commingSoon .movie__item .movie__intro p:nth-of-type(2) {
   display: block !important;
 }
 
@@ -1175,19 +1342,23 @@ header .right button:focus {
 
 .banner .banner__content .right .mobileCarousel {
   position: absolute;
-  top: 11px;
-  left: 169px;
+  top: 0;
+  left: 30%;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  border-radius: 25px;
   overflow: hidden;
-  white-space: nowrap;
-}
-
-.banner .banner__content .right .mobileCarousel .item {
-  display: inline;
 }
 
 .banner .banner__content .right .mobileCarousel .item .img-item {
-  height: 470px !important;
-  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.banner .banner__content .right .owl-nav {
+  display: none;
 }
 
 .showing {
