@@ -797,6 +797,30 @@ header .right ::-webkit-scrollbar-thumb {
   color: #fb4226;
 }
 
+.modal {
+  /* width */
+  /* Track */
+  /* Handle */
+}
+
+.modal ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal ::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.364);
+}
+
+.modal-dialog {
+  height: 95%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 #sidebar.active {
   right: 0;
 }

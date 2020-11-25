@@ -1,137 +1,14 @@
-var soLanThemNoiDung = 0;
-var y = 0;
-var z = 0;
+var soLanThemNoiDungDienAnh = 0;
+var soLanThemNoiDungReview = 0;
+var soLanThemNoiDungKhuyenMai = 0;
 
 
-var noiDungKhuyenMaiThemVao = `
-<div class="col-12 col-sm-6 news__item">
-                            <a href="#">
-                                <img class="img-fluid"
-                                    src="./img/bhd-59k-ve-ca-tuan-16045659414321.jpg"
-                                    alt="">
-                            </a>
-                            <a class="news__title" href="#">
-                                <p>BHD 59K/VÉ CẢ TUẦN !!! </p>
-                            </a>
-                            <p class="news__description">Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX hoặc Mục Vé Phim trên ZaloPay. </p>
-                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
-                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
-                        </div>
-                        <div class="col-12 col-sm-6 news__item">
-                            <a href="#">
-                                <img class="img-fluid"
-                                    src="./img/tix-1k-ve-ngai-chi-gia-ve-16045662877511.jpg"
-                                    alt="">
-                            </a>
-                            <a class="news__title" href="#">
-                                <p>TIX 1K/VÉ NGẠI CHI GIÁ VÉ </p>
-                            </a>
-                            <p class="news__description">Đồng giá 1k/vé cả tuần tất cả các rạp trên TIX + Nhận thêm 02 voucher thanh toán ZaloPay thả ga </p>
-                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
-                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
-                        </div>
-                        <div class="col-12 col-sm-4 news__item">
-                            <a href="#">
-                                <img class="img-fluid"
-                                    src="./img/dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.png"
-                                    alt="">
-                            </a>
-                            <a class="news__title" href="#">
-                                <p>ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX  </p>
-                            </a>
-                            <p class="news__description">ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX 
 
-                                Hành trình tìm Ròm và Phúc chỉ với 1k cả tuần + nhận thêm 02 voucher khi đặt vé qua TIX. </p>
-                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
-                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
-                        </div>
-                        <div class="col-12 col-sm-4 news__item">
-                            <a href="#">
-                                <img class="img-fluid"
-                                    src="./img/bhd-star-ve-chi-59-000d-ca-tuan-15937622264546.jpg"
-                                    alt="">
-                            </a>
-                            <a class="news__title" href="#">
-                                <p>BHD STAR VÉ CHỈ 59.000Đ CẢ TUẦN! </p>
-                            </a>
-                            <p class="news__description">Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX và thanh toán bằng ZaloPay hoặc Mục Vé Phim trên ZaloPay. </p>
-                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
-                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
-                        </div>
-                        <div class="col-12 col-sm-4 news__item">
-                            <div class="row">
-                                <div class="col-12 news__last">
-                                    <div class="row">
-                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
-                                            <a href="#">
-                                                <img class="img-fluid"
-                                                    src="./img/beta-cineplex-tro-lai-voi-hang-loat-uu-dai-lon-15889408112010.png"
-                                                    alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
-                                            <a class="news__title" href="#">
-                                                <p class="hiding">Beta Cineplex trở lại với hàng loạt ưu đãi lớn </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 news__last">
-                                    <div class="row">
-                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
-                                            <a href="#">
-                                                <img class="img-fluid"
-                                                    src="./img/123phim-thu-6-khong-den-toi-uu-dai-huy-diet-11k-ve-anh-trai-yeu-quai-15746757294099.jpg"
-                                                    alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
-                                            <a class="news__title" href="#">
-                                                <p class="hiding">[123Phim] Thứ 6 Không Đen Tối -  Ưu đãi huỷ diệt 11k/vé Anh Trai Yêu Quái </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 news__last">
-                                    <div class="row">
-                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
-                                            <a href="#">
-                                                <img class="img-fluid"
-                                                    src="./img/123phim-nhap-ma-psm30k-giam-ngay-30k-khi-dat-ve-phap-su-mu-ai-chet-gio-tay-15729439018211.jpg"
-                                                    alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
-                                            <a class="news__title" href="#">
-                                                <p class="hiding">[123Phim] NHẬP MÃ 'PSM30K' - Giảm ngay 30k khi đặt vé Pháp Sư Mù: Ai Chết Giơ Tay </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 news__last">
-                                    <div class="row">
-                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
-                                            <a href="#">
-                                                <img class="img-fluid"
-                                                    src="./img/mega-gs-mot-doa-hoa-thay-ngan-loi-yeu-15713106082164.jpg"
-                                                    alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
-                                            <a class="news__title" href="#">
-                                                <p class="hiding">[Mega GS] Một đoá hoa thay ngàn lời yêu </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-`;
 
 document.querySelector('#btnXemThemDienAnh').onclick = function () {
 
     var noiDungDienAnhThemVao = `
-<div id="dienAnhNews${soLanThemNoiDung}" class="row">
+<div id="dienAnhNews${soLanThemNoiDungDienAnh}" class="row">
                             <div class="col-12 col-sm-6 news__item">
                                 <a href="#">
                                     <img class="img-fluid"
@@ -289,16 +166,16 @@ document.querySelector('#btnXemThemDienAnh').onclick = function () {
 
     document.querySelector('#dienAnhContent').innerHTML = dienAnhContent + noiDungDienAnhThemVao;
 
-    var viTriKeo = document.getElementById('dienAnhNews' + soLanThemNoiDung).offsetTop;
+    let viTriKeo = document.getElementById('dienAnhNews' + soLanThemNoiDungDienAnh).offsetTop;
 
     window.scrollTo(0, viTriKeo - 70);
     
-    soLanThemNoiDung += 1;
+    soLanThemNoiDungDienAnh += 1;
 }
 
 document.querySelector('#btnXemThemReview').onclick = function () {
     var noiDungReviewThemVao = `
-<div class="col-12 col-sm-6 news__item">
+<div id="reviewNews${soLanThemNoiDungReview}" class="col-12 col-sm-6 news__item">
                             <a href="#">
                                 <img class="img-fluid"
                                     src="./img/review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket-15965255784224.png"
@@ -422,13 +299,152 @@ document.querySelector('#btnXemThemReview').onclick = function () {
     var reviewContent = document.querySelector('#reviewContent').innerHTML;
 
     document.querySelector('#reviewContent').innerHTML = reviewContent + noiDungReviewThemVao;
+
+    let viTriKeo = document.getElementById('reviewNews' + soLanThemNoiDungReview).offsetTop;
+
+    window.scrollTo(0, viTriKeo - 70);
+    
+    soLanThemNoiDungReview += 1;
+
 }
 
 document.querySelector('#btnXemThemKhuyenMai').onclick = function () {
 
+    var noiDungKhuyenMaiThemVao = `
+<div id="khuyenMaiNews${soLanThemNoiDungKhuyenMai}" class="col-12 col-sm-6 news__item">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="./img/bhd-59k-ve-ca-tuan-16045659414321.jpg"
+                                    alt="">
+                            </a>
+                            <a class="news__title" href="#">
+                                <p>BHD 59K/VÉ CẢ TUẦN !!! </p>
+                            </a>
+                            <p class="news__description">Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX hoặc Mục Vé Phim trên ZaloPay. </p>
+                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
+                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
+                        </div>
+                        <div class="col-12 col-sm-6 news__item">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="./img/tix-1k-ve-ngai-chi-gia-ve-16045662877511.jpg"
+                                    alt="">
+                            </a>
+                            <a class="news__title" href="#">
+                                <p>TIX 1K/VÉ NGẠI CHI GIÁ VÉ </p>
+                            </a>
+                            <p class="news__description">Đồng giá 1k/vé cả tuần tất cả các rạp trên TIX + Nhận thêm 02 voucher thanh toán ZaloPay thả ga </p>
+                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
+                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
+                        </div>
+                        <div class="col-12 col-sm-4 news__item">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="./img/dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.png"
+                                    alt="">
+                            </a>
+                            <a class="news__title" href="#">
+                                <p>ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX  </p>
+                            </a>
+                            <p class="news__description">ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX 
+
+                                Hành trình tìm Ròm và Phúc chỉ với 1k cả tuần + nhận thêm 02 voucher khi đặt vé qua TIX. </p>
+                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
+                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
+                        </div>
+                        <div class="col-12 col-sm-4 news__item">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="./img/bhd-star-ve-chi-59-000d-ca-tuan-15937622264546.jpg"
+                                    alt="">
+                            </a>
+                            <a class="news__title" href="#">
+                                <p>BHD STAR VÉ CHỈ 59.000Đ CẢ TUẦN! </p>
+                            </a>
+                            <p class="news__description">Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá 59k/vé khi mua vé trên TIX và thanh toán bằng ZaloPay hoặc Mục Vé Phim trên ZaloPay. </p>
+                            <a href="#" class="news__icon"><i class="fa fa-thumbs-up"></i> 1</a>
+                            <a href="#" class="news__icon"><i class="fa fa-comment-alt"></i> 1</a>
+                        </div>
+                        <div class="col-12 col-sm-4 news__item">
+                            <div class="row">
+                                <div class="col-12 news__last">
+                                    <div class="row">
+                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
+                                            <a href="#">
+                                                <img class="img-fluid"
+                                                    src="./img/beta-cineplex-tro-lai-voi-hang-loat-uu-dai-lon-15889408112010.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
+                                            <a class="news__title" href="#">
+                                                <p class="hiding">Beta Cineplex trở lại với hàng loạt ưu đãi lớn </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 news__last">
+                                    <div class="row">
+                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
+                                            <a href="#">
+                                                <img class="img-fluid"
+                                                    src="./img/123phim-thu-6-khong-den-toi-uu-dai-huy-diet-11k-ve-anh-trai-yeu-quai-15746757294099.jpg"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
+                                            <a class="news__title" href="#">
+                                                <p class="hiding">[123Phim] Thứ 6 Không Đen Tối -  Ưu đãi huỷ diệt 11k/vé Anh Trai Yêu Quái </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 news__last">
+                                    <div class="row">
+                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
+                                            <a href="#">
+                                                <img class="img-fluid"
+                                                    src="./img/123phim-nhap-ma-psm30k-giam-ngay-30k-khi-dat-ve-phap-su-mu-ai-chet-gio-tay-15729439018211.jpg"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
+                                            <a class="news__title" href="#">
+                                                <p class="hiding">[123Phim] NHẬP MÃ 'PSM30K' - Giảm ngay 30k khi đặt vé Pháp Sư Mù: Ai Chết Giơ Tay </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 news__last">
+                                    <div class="row">
+                                        <div class="col-2 col-sm-4 col-lg-3 news__small">
+                                            <a href="#">
+                                                <img class="img-fluid"
+                                                    src="./img/mega-gs-mot-doa-hoa-thay-ngan-loi-yeu-15713106082164.jpg"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-10 col-sm-8 col-lg-9 news__small">
+                                            <a class="news__title" href="#">
+                                                <p class="hiding">[Mega GS] Một đoá hoa thay ngàn lời yêu </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+`;
+
     var khuyenMaiContent = document.querySelector('#khuyenMaiContent').innerHTML;
 
     document.querySelector('#khuyenMaiContent').innerHTML = khuyenMaiContent + noiDungKhuyenMaiThemVao;
+
+    let viTriKeo = document.getElementById('khuyenMaiNews' + soLanThemNoiDungKhuyenMai).offsetTop;
+
+    window.scrollTo(0, viTriKeo - 70);
+    
+    soLanThemNoiDungKhuyenMai += 1;
 }
 
 document.querySelector('#commingSoon').classList.remove("show", "active");
+
