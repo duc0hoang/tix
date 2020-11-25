@@ -1324,7 +1324,7 @@ header .right ::-webkit-scrollbar-thumb {
 
 .banner {
   padding: 120px 0 80px 0;
-  background: url(../../img/backapp.jpg);
+  background: url(../img/backapp.jpg);
   background-size: contain;
 }
 
