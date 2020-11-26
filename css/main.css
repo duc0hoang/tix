@@ -1168,13 +1168,18 @@ header .right ::-webkit-scrollbar-thumb {
   display: none;
 }
 
+#movie .movie__content .owl-prev:focus,
+#movie .movie__content .owl-next:focus {
+  outline: none;
+}
+
 #movie .movie__content .owl-prev {
-  background-image: url(../../img/back-session.png) !important;
+  background-image: url(../img/back-session.png) !important;
   left: -70px;
 }
 
 #movie .movie__content .owl-next {
-  background-image: url(../../img/next-session.png) !important;
+  background-image: url(../img/next-session.png) !important;
   right: -70px;
 }
 

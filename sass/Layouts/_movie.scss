@@ -38,13 +38,16 @@
             span {
                 display: none;
             }
+            &:focus{
+                outline: none;
+            }
         }
         .owl-prev {
-            background-image: url(../../img/back-session.png) !important;
+            background-image: url(../img/back-session.png) !important;
             left: -70px;
         }
         .owl-next {
-            background-image: url(../../img/next-session.png) !important;
+            background-image: url(../img/next-session.png) !important;
             right: -70px;
         }
         .movie__item {
